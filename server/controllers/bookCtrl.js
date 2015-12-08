@@ -32,7 +32,18 @@ module.exports.getAll = function (req,res) {
         res.json(libros);
     });
   });
-  
-  
 };
-
+module.exports.borra=function (req,res) {  //Exporto el modulo para que pueda ser usado en el servidor
+    book = req.body; //Libro que sera insertado, los datos se mandan por medio de un formulario con angularJS
+    console.log("BORRANDO: "+req.body);
+    
+    mongo.connect(url, function (err, db) {
+       if (err)throw err;
+       var books = db.collection('books');
+       books.remove(book,function (err,data) {
+           if (err) throw err;
+           db.close();
+       })
+    });
+    res.json(req.body); 
+};

@@ -3,10 +3,10 @@
   <head>
     <title>Libreria app</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/app/style/app.css" type="text/css" />
   </head>
   <body>
-    <nav class="navbar navbar-inverse" ng-controller="navController as tab">
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navController as tab">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Libreria</a>
@@ -21,7 +21,7 @@
       </div>
     </nav>
     
-    <div  ui-view ></div>
+    <div  ui-view class="b"></div>
     
     <!-- angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>

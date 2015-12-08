@@ -19,8 +19,9 @@ app.get('/',function (req, res) {
 });
 /*-- Operaciones CRUD ---*/
 app.get('/api/book/findall', bookCtrl.getAll); //Obtener todos los libros
-
+app.post('/api/book/del', bookCtrl.borra);//Borrar un libro
 app.post('/api/book/add', bookCtrl.add); //Añadir un libro
+
 /*---        --------*/
 
 /*-- Corro el servidor --*/

@@ -1,1 +1,23 @@
-<h1>Buscar!!</h1>
+<!--añadimos aquí el controlador libreriaController ya que será donde mostremos los datos-->
+    <div class="row" ng-controller="BuscarController">
+    	
+        <h1 class="subheader">Filtrar datos con AngularJS</h1>
+        <div class="row">
+    		<div class="large-12 columns">
+    			 <label>Filtra tu búsqueda: </label>
+    			 <input type="text" ng-model="buscador" />
+    		</div>
+    		
+    	</div>
+        <div style="margin-bottom: 25px" class="row panel radius" ng-repeat="articulo in articulos|filter:buscador">              	
+            
+            <div class="large-3 columns">
+            	<img ng-src="imgs/{{articulo.img}}"/>
+            </div>
+            
+            <div class="large-8 columns">
+            	<h4 class="subheader">{{ articulo.titulo }}</h4><br />
+            	{{ articulo.sinopsis }}
+            </div>                  
+        </div>
+    </div>

@@ -1,17 +1,30 @@
-<div class="row" ng-controller="HomeController">
-  
-  <!-- col-sn-offset-3 lo pone el medio -->
-  <div class="col-sm-6 col-sm-offset-3">
-    <button ng-click="findall()">Listar libros</button>
-    <div class="row">
-        <ol>
-            <li ng-repeat="book in books">
-                <strong>{{book.name}}</strong>, {{book.author}}, {{book.year}}, {{book.language}}
-            </li>
-        </ol>
-    </div>
-  </div>
-  
-  
-
+<div class="row a" ng-controller="HomeController">
+  <section class="panel panel-default">
+    <header class="panel-heading">
+      <h3 class="panel-title"><strong>Lista de libros disponibles</strong></h3>
+    </header>
+    <table class="table col-sn-offset-3 "  >
+      <thead>
+			<tr>
+				<th>Titulo <div class="large-9 columns"><input type="text" ng-model="buscador"/></div></th>
+				<th>Autor<div class="large-9 columns"><input type="text" ng-model="autor"/></div></th>
+				<th>Año de publicación<div class="large-9 columns"><input type="text" ng-model="year"/></div></th>
+				<th>Lenguaje<div class="large-9 columns"><input type="text" ng-model="language"/></div></th>
+				<th></th>
+			</tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="book in books|filter:buscador|filter:autor|filter:year|filter:language">
+          <td><img class="im" src="https://mean-libreria-cposada23.c9users.io/app/img/libro.png"></img> {{book.name}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.year}}</td>
+          <td>{{book.language}}</td>
+          <td><button ng-click="borrar(book)" class="btn btn-default"><span class="glyphicon glyphicon-remove-sign"></span> Eliminar</button></td>
+       
+        </tr>
+		  </tbody>
+    </table>
+      <!-- col-sn-offset-3 lo pone el medio -->
+  </section>
+  <button ng-click="findall()">Refrescar</button>
 </div>
