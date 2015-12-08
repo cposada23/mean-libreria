@@ -1,0 +1,34 @@
+<div class="row" ng-controller="InsertarController">
+  
+  <!-- col-sn-offset-3 lo pone el medio -->
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="row">
+      <strong>Nombre:  </strong>
+      <input type="text" ng-model="nuevoLibro.name" class="form-control" plaseholder="Title">
+    </div>
+    
+    <div class="row">
+      <strong>Año:  </strong>
+      <input type="text" ng-model="nuevoLibro.year" class="form-control" plaseholder="1900">
+    </div>
+    
+    <div class="row">
+      <strong>Lenguaje:  </strong>
+      <input type="text" ng-model="nuevoLibro.language" class="form-control" plaseholder="español">
+    </div>
+    
+    <div class="row">
+      <strong>Autor:  </strong>
+      <input type="text" ng-model="nuevoLibro.author" class="form-control" plaseholder="nombre">
+    </div>
+    
+    <button ng-click="createBook()">Submit</button>
+  </div>
+</div>
+
+<!--button"name": "Las enseñansas de don juan",
+    "year": "2009",
+    "language": "Ingles",
+    "author": "Carlos castaneda"
+    
+    -->

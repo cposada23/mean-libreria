@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="LibreriaApp">
+  <head>
+    <title>Libreria app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Libreria</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"> <a ui-sref="Home">Home</a></li>
+            <li><a ui-sref="Buscar">Buscar</a></li>
+            <li><a ui-sref="Insertar">Insertar</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div  ui-view ></div>
+    
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+    <!-- uirouter -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    
+   
+    <!-- script app -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/appControllers/BuscarController.js"></script>
+    <script type="text/javascript" src="app/appControllers/HomeController.js"></script>
+    <script type="text/javascript" src="app/appControllers/InsertarController.js"></script>
+    
+  </body>
+</html>

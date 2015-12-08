@@ -1,0 +1,33 @@
+{
+  "name": "libreria",
+  "version": "1.0.0",
+  "description": "intento de aplicacion MEAN donde se hace un crud para insertar, borrar y mostrar los libros de una libreria.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cposada23/mean-libreria.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "angularJS",
+    "Mongo",
+    "Express",
+    "mongoose",
+    "mongolab.com"
+  ],
+  "author": "Camilo Posada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cposada23/mean-libreria/issues"
+  },
+  "homepage": "https://github.com/cposada23/mean-libreria#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.0",
+    "path": "^0.12.7"
+  }
+}
