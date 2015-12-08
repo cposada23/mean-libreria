@@ -6,16 +6,16 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" ng-controller="navController as tab">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Libreria</a>
         </div>
         <div>
           <ul class="nav navbar-nav">
-            <li class="active"> <a ui-sref="Home">Home</a></li>
-            <li><a ui-sref="Buscar">Buscar</a></li>
-            <li><a ui-sref="Insertar">Insertar</a></li> 
+            <li ng-class="{ active: tab.isSet(1) }"> <a ui-sref="Home" ng-click="tab.setTab(1)">Home</a></li>
+            <li ng-class="{ active: tab.isSet(2) }"><a ui-sref="Buscar" ng-click="tab.setTab(2)">Buscar</a></li>
+            <li ng-class="{ active: tab.isSet(3) }"><a ui-sref="Insertar" ng-click="tab.setTab(3)">Insertar</a></li> 
           </ul>
         </div>
       </div>
@@ -34,6 +34,7 @@
     <script type="text/javascript" src="app/appControllers/BuscarController.js"></script>
     <script type="text/javascript" src="app/appControllers/HomeController.js"></script>
     <script type="text/javascript" src="app/appControllers/InsertarController.js"></script>
+    <script type="text/javascript" src="app/appControllers/navController.js"></script>
     
   </body>
 </html>

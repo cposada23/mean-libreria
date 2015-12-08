@@ -1,1 +1,17 @@
-<h1>HOLA ESTA EL HOME</h1>
+<div class="row" ng-controller="HomeController">
+  
+  <!-- col-sn-offset-3 lo pone el medio -->
+  <div class="col-sm-6 col-sm-offset-3">
+    <button ng-click="findall()">Listar libros</button>
+    <div class="row">
+        <ol>
+            <li ng-repeat="book in books">
+                <strong>{{book.name}}</strong>, {{book.author}}, {{book.year}}, {{book.language}}
+            </li>
+        </ol>
+    </div>
+  </div>
+  
+  
+
+</div>
