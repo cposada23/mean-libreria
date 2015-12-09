@@ -19,6 +19,8 @@ module.exports.add=function (req,res) {  //Exporto el modulo para que pueda ser 
     
     res.json(req.body); 
 };
+
+/*-- Modulo para obtener todos los libros --*/
 module.exports.getAll = function (req,res) {
   console.log("buscando todos ..." );
   mongo.connect(url, function(err, db) {
@@ -33,6 +35,8 @@ module.exports.getAll = function (req,res) {
     });
   });
 };
+
+/*--- Modulo para borrar libros ---*/
 module.exports.borra=function (req,res) {  //Exporto el modulo para que pueda ser usado en el servidor
     book = req.body; //Libro que sera insertado, los datos se mandan por medio de un formulario con angularJS
     console.log("BORRANDO: "+req.body);
@@ -46,4 +50,27 @@ module.exports.borra=function (req,res) {  //Exporto el modulo para que pueda se
        })
     });
     res.json(req.body); 
+};
+
+
+/*--- Modulo para actualizar un libro --*/
+
+module.exports.update = function(req, res) {
+    console.log("Actualizando ....");
+    
+    /*mongo.connect(url, function(err, db) {
+        if (err) throw err
+        var collection = db.collection("users")
+        collection.update(  {username:"tinatime"}, {
+            $set:{
+            age:40
+            }
+        },
+        
+        function(err, data) {
+            if(err)throw err;
+            data.close();
+        })
+    })  */
+    
 };

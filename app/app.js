@@ -23,6 +23,11 @@
             url: "/insertar",
             templateUrl: "app/templates/insertar.html",
             controller: "BuscarController"
+        }).
+        state('Modificar', {
+            url:"/modificar",
+            templateUrl:"app/templates/modificar.html",
+            controller:"ModificarController"
         });
      
         

@@ -6,10 +6,11 @@
     <table class="table col-sn-offset-3 "  >
       <thead>
 			<tr>
-				<th>Titulo <div class="large-9 columns"><input type="text" ng-model="buscador"/></div></th>
-				<th>Autor<div class="large-9 columns"><input type="text" ng-model="autor"/></div></th>
-				<th>Año de publicación<div class="large-9 columns"><input type="text" ng-model="year"/></div></th>
-				<th>Lenguaje<div class="large-9 columns"><input type="text" ng-model="language"/></div></th>
+				<th>Titulo <div class="large-9 columns"><input type="text" ng-model="buscador" placeholder="Filtrar por fecha"/></div></th>
+				<th>Autor<div class="large-9 columns"><input type="text" ng-model="autor" placeholder="Filtrar por autor"/></div></th>
+				<th>Año de publicación<div class="large-9 columns"><input type="text" ng-model="year" placeholder="Filtrar por año"/></div></th>
+				<th>Lenguaje<div class="large-9 columns"><input type="text" ng-model="language" placeholder="Filtrar por lenguaje"/></div></th>
+				<th></th>
 				<th></th>
 			</tr>
 		  </thead>
@@ -20,11 +21,12 @@
           <td>{{book.year}}</td>
           <td>{{book.language}}</td>
           <td><button ng-click="borrar(book)" class="btn btn-default"><span class="glyphicon glyphicon-remove-sign"></span> Eliminar</button></td>
+          <td><a ng-click="guardarLibro(book)" ui-sref="Insertar">Editar</a></td>
        
         </tr>
 		  </tbody>
     </table>
       <!-- col-sn-offset-3 lo pone el medio -->
   </section>
-  <button ng-click="findall()">Refrescar</button>
+  <button ng-click="findall()">Mostrar Libros</button>
 </div>

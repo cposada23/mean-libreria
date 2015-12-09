@@ -3,6 +3,11 @@
     
     app.controller('HomeController', ['$scope', '$state', '$http', function($scope, $state, $http){
         $scope.books =[];
+        
+        $scope.guardarLibro= function (book) {
+            console.log('Guardando el libro');
+            localStorage.setItem('LibroAModificar', JSON.stringify(book));
+        }
         $scope.findall = function () {
             $http.get('https://mean-libreria-cposada23.c9users.io/api/book/findall').success(function (response) {
                 console.log("Libros buscados correctamente");

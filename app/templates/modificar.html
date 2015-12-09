@@ -1,25 +1,25 @@
-<div class="row a" ng-controller="InsertarController">
+<div class="row a" ng-controller="ModificarController">
   
   <!-- col-sn-offset-3 lo pone el medio -->
   <div class="col-sm-6 col-sm-offset-3">
     <div class="row">
       <strong>Nombre:  </strong>
-      <input type="text" ng-model="nuevoLibro.name" class="form-control" placeholder="Title">
+      <input type="text" ng-model="nuevoLibro.name" class="form-control" value="libro.name">
     </div>
     
     <div class="row">
       <strong>Año:  </strong>
-      <input type="text" ng-model="nuevoLibro.year" class="form-control" placeholder="1900">
+      <input type="text" ng-model="nuevoLibro.year" ng-value="name" class="form-control" >
     </div>
     
     <div class="row">
       <strong>Lenguaje:  </strong>
-      <input type="text" ng-model="nuevoLibro.language" class="form-control" placeholder="español">
+      <input type="text" ng-model="nuevoLibro.language" class="form-control" value="libro.language">
     </div>
     
     <div class="row">
       <strong>Autor:  </strong>
-      <input type="text" ng-model="nuevoLibro.author" class="form-control" placeholder="nombre">
+      <input type="text" ng-model="nuevoLibro.author" class="form-control" value="libro.author">
     </div>
     
     <button ng-click="createBook()">Submit</button>
@@ -28,4 +28,3 @@
   
 
 </div>
-
